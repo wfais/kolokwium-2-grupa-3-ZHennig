@@ -7,13 +7,13 @@ def transform_texts(texts):
     """
     
     # Odfiltruj puste napisy.
-    # filtered_texts = [t for t in texts if ...]
+    filtered_texts = [t for t in texts if t.strip()]
 
     # Zastosuj map i lambda do przekształceń.
-    # transformed = map(lambda t: ..., filtered_texts)
+    transformed = map(lambda t: t.upper()[::-1], filtered_texts)
 
     # Zwróć wyniki w postaci listy.
-    pass
+    return list(transformed)
 
 if __name__ == '__main__':
     # Przykładowe wywołanie:
